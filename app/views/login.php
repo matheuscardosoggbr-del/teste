@@ -54,7 +54,7 @@
                     <a href="#">conectar com facebook</a>
                 </div>
                 <div class="login-footer">
-                    Novo por aqui? <a href="#">Assine agora</a>
+                    Novo por aqui? <a href="/GITTRABALHOS/TESTE/app/views/register.php">Assine agora</a>
                 </div>
 
             </form>

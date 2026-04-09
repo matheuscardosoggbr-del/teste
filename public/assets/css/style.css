@@ -1,5 +1,5 @@
 /* pagina de login */
-.login-body {
+.login-body, .registro-body {
   margin: 0;
   height: 100vh;
   background: url("https://assets.nflxext.com/ffe/siteui/vlv3/9f6c9e5d-1b5c-4f6d-8f2e-d5c9f0f8b3e5/cover.jpg")
@@ -9,14 +9,16 @@
 }
 
 /* Overlay escuro */
-.login-body {
+.login-body, .registro-body {
   margin: 0;
   height: 100vh;
 
   background: url("../css/img/fundo-login.png") no-repeat center center;
   background-size: cover;
 }
-.login-body::before {
+
+.login-body::before,
+.registro-body::before {
   background: url("img/fundo-login.png") no-repeat center center;
   content: "";
   position: absolute;
@@ -38,7 +40,7 @@
   font-style: normal;
 }
 
-.logo-svg {
+.logo-svg, .logo-text {
     position: absolute;
     top: 20px;
     left: 40px;
@@ -46,15 +48,16 @@
 }
 
 /* Estilo da fonte */
-.logo-text {
+.logo-text, .logo-svg text {
     fill: #e50914;
     font-size: 60px;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 4px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
 }
+
 /* Centralização */
-.login-wrapper {
+.login-wrapper, .registro-wrapper {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -64,7 +67,7 @@
 }
 
 /* Card */
-.login-card {
+.login-card, .registro-card {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 60px 50px;
   width: 380px;
@@ -135,55 +138,16 @@
   color: #737373;
   font-size: 14px;
 }
-
+.register-footer {
+  margin-top: 45px;
+  color: #737373;
+  font-size: 14px;
+}
 .login-footer a {
   color: white;
   text-decoration: none;
 }
+
 .icone-facebook {
   margin-top: 90px;
-}
-/* pagina de registro */
-.register-body {
-  background: linear-gradient(to right, #000, #141414);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-.register-container {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-}
-.register-container h1 {
-  color: #e50914;
-}
-.register-container input {
-  width: 93%;
-  padding: 10px;
-  margin: 10px 0;
-  background: #333;
-  border: none;
-  color: white;
-  border-radius: 5px;
-}
-.register-container button {
-  width: 100%;
-  padding: 10px;
-  background: #e50914;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.register-container button:hover {
-  background: #f40612;
-}
-.register-error {
-  color: #e50914;
-  margin-top: 10px;
 }

@@ -1,28 +1,56 @@
-
 <!DOCTYPE html>
-<htm lang="pt-br">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>registro - StreamPlus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro - StreamPlus</title>
+
     <link rel="stylesheet" href="/GITTRABALHOS/TESTE/public/assets/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body class="register-body">
-<?php if(isset($_GET['erro'])): ?>
-<div class="register-error">
-    <p>Email já cadastrado!</p></div>
-<?php endif; ?>
-<div class="register-container">
-    <h1>StreamPlus</h1>
 
-    <form method="POST" action="/GITTRABALHOS/TESTE/app/controllers/AuthController.php">
-        <input name="nome" placeholder="Nome" required>
-        <input name="email" placeholder="Email" required>
-        <input type="password" name="senha" placeholder="Senha" required>
-        <input type="hidden" name="action" value="register">
-        <button>Criar conta</button>
-    </form>
+<body class="registro-body">
 
-    <a href="?url=login">Já tem uma conta? Entre</a>
+    <!-- LOGO -->
+    <svg class="logo-svg" viewBox="0 0 400 150">
+        <path id="curva" d="M 40 100 Q 200 20 360 100" fill="transparent"/>
+        <text class="logo-text">
+            <textPath href="#curva" startOffset="50%" text-anchor="middle">
+                STREAMPLUS
+            </textPath>
+        </text>
+    </svg>
+
+    <div class="registro-wrapper">
+        <div class="registro-card">
+
+            <h2>Criar conta</h2>
+
+            <form method="POST" action="/GITTRABALHOS/TESTE/register">
+
+                <input type="text" class="input-netflix" placeholder="Nome completo" name="nome" required>
+
+                <input type="email" class="input-netflix" placeholder="Email" name="email" required>
+
+                <input type="password" class="input-netflix" placeholder="Senha" name="password" required>
+
+                <input type="password" class="input-netflix" placeholder="Confirmar senha" name="confirm_password" required>
+
+                <button type="submit" class="btn-netflix">Cadastrar</button>
+
+                <div class="register-footer">
+                    Já tem conta? 
+                    <a href="/GITTRABALHOS/TESTE/app/views/login.php">Entrar</a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
 </body>
 </html>
